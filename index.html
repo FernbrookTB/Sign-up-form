@@ -4,40 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sign Up</title>
+    <title>Retrowave Studio</title>
 </head>
 <body>
     <img src="/Images/nick-reynolds-Im997E8lWho-unsplash.jpg">
 <div class="mainContainer">
     <div id="containerLeft">
+
+        <h1>Retrowave Studio</h1>
         
     </div>
 
     <div id="containerRight">
 
-        <fieldset>
+        <div id="hero">
+            <h1> Sign up. Tune out. Create.</h1>
+            <h4> Where your creativity lives. Digitally and beautifully</h4>
+        </div>
+
+        
         <form action="#" method="post">
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <fieldset>
             
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
 
-            <label for="user_email">Email:</label>
-            <input type="email" id="user_email" name="email" required>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
 
-            <label for="phone_number">Phone Number:</label>
-            <input type="tel" id="phone_number" name="phone_number">
+            <div class="form-group">
+                <label for="user_email">Email:</label>
+                <input type="email" id="user_email" name="email" required>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" minlength="8" required>
+            <div class="form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="tel" id="phone_number" name="phone_number">
+            </div>
 
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+                
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+
+        </fieldset>    
         </form>
-        </fieldset>
-        <button type="submit" id="createAccount">Create Account</button>
-        <p>Already have an account? <a href="#">Log in</a></p>
+        
+
+        <div id="accountCreate">
+            <button type="submit" id="createAccount">Enter The Studio</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
     </div>
 </div>
     
