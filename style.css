@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,7 +8,8 @@
 
 :root {
     --background-color-transparent: rgba(255, 255, 255, 0.103);
-    --outline-color-transparent:  rgba(255, 255, 255, 0.199)
+    --outline-color-transparent:  rgba(255, 255, 255, 0.199);
+    --google-font:'Baumans', sans-serif;
 }
 
 .mainContainer {
@@ -24,15 +27,27 @@
     height: 100vh;
     width: 50%;
     border: 1px solid rgba(255, 255, 255, 0.199);
-
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.103);
-    
+    box-shadow: 0 2px 8px var(--outline-color-transparent);
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.199);
+}
+
+#hero {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    font-family: var(--google-font);
 }
 
 form {
     width: 80%;
     max-width: 600px;
     margin: 0 auto;
+    box-shadow: 0 8px 32px var(--outline-color-transparent);
+    border: 1px var(--outline-color-transparent);
+    padding: 25px 25px;
+    border-radius: 16px;
 }
 
 form fieldset {
@@ -46,13 +61,37 @@ form fieldset {
     border: none;
     padding: 0;
     margin: 0;
+    column-gap: 4em;
+    font-family: var(--google-font);;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     min-width: 0;
-    text-align: center;
+    
+    
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px var(--outline-color-transparent);
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.534);
+    margin-bottom: 0.5em;
+    font-family: var(--google-font);
+}
+
+input:invalid{
+    color: rgba(255, 0, 0, 0.384);
+}
+
+input:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #ff4fd8;
 }
 
 #accountCreate {
@@ -61,8 +100,9 @@ form fieldset {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    width: 80%;
-    
+    width: 100%;
+    margin-top: 3em;
+    font-family: var(--google-font);
 }
 
 
@@ -77,23 +117,41 @@ form fieldset {
 }
 
 #containerLeft h1 {
-    font-size: 54px;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    
     
 }
 
-img {
+
+
+#backgroundPhoto {
     position: absolute;
     width: 100%;
     z-index: 0;
     height: 100vh;
     object-fit: cover;
+    filter:brightness(80%);
+}
+
+#logo {
+    position: absolute;
+    width: 40%;
+    box-shadow: 0 0 10px white;
 }
 
 button {
     background: var(--background-color-transparent);
     border-color: var(--outline-color-transparent);
-    border-radius: 10%;
+    border-radius: 16px;
     height: 3em;
     width: 10em;
+    font-family: var(--google-font);
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #ff4fd8;
 }
 
