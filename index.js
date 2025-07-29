@@ -3,14 +3,26 @@ function passwordMatch() {
     const passwordConfirm = document.getElementById('confirmPassword');
     const messageElement = document.getElementById('passwordMatchMessage');
 
+    if (password.value === '' || passwordConfirm.value === '') {
+        messageElement.textContent = '';
+        messageElement.style.color = '';
+        return;}
+
     if (password.value === passwordConfirm.value) {
         messageElement.textContent = 'Passwords match!';
         messageElement.style.color = 'green';
-    } else {
+     } else if (password.value === '' && passwordConfirm.value !== password.value ) {
+        messageElement.textContent = '';
+        messageElement.style.color = '';
+    }  
+     else {
         messageElement.textContent = 'Passwords do not match.';
         messageElement.style.color = 'red';
     }
     
 }
+
 password.addEventListener('input', passwordMatch);
     confirmPassword.addEventListener('input', passwordMatch);
+
+
