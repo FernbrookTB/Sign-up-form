@@ -1,7 +1,9 @@
+const messageElement = document.getElementById('passwordMatchMessage');
+
 function passwordMatch() {
     const password = document.getElementById("password");
     const passwordConfirm = document.getElementById('confirmPassword');
-    const messageElement = document.getElementById('passwordMatchMessage');
+    
 
     if (password.value === '' || passwordConfirm.value === '') {
         messageElement.textContent = '';

@@ -94,6 +94,8 @@ input:focus-visible,button:focus-visible {
     box-sizing: border-box;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    animation: fadeIn 2s ease-in 1s forwards;
+    opacity: 0;
     
 }
 
@@ -138,6 +140,7 @@ form fieldset {
     
 }
 
+/* changes the input field sizes and fonts */
 .form-group input {
     width: 100%;
     padding: 0.5em;
@@ -162,6 +165,19 @@ input:invalid{
 input:hover {
     transform: scale(1.03);
     box-shadow: 0 0 10px #ff4fd980;
+}
+
+#passwordMatchMessage {
+    background-color: rgba(255, 255, 255, 0.199);
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    width: fit-content;
+    padding:  6px 12px;
+    max-width: 100%;
+    
+    transition: all 0.2s ease;
+    
 }
 
 #accountCreate {
@@ -220,8 +236,10 @@ button {
 button:hover {
     transform: scale(1.03);
     box-shadow: 0 0 10px #ff4fd8;
+    cursor: pointer;
 }
 
+/* animation for the left and right container to flow from the right on page load */
 @keyframes slideInRight {
     0% {
         opacity: 0;
@@ -231,6 +249,17 @@ button:hover {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* animation for the hero fade in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
