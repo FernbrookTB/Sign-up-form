@@ -140,6 +140,20 @@ form fieldset {
     
 }
 
+/* when using autofill, this gets rid of the background-color getting filled with white rather than what i originally have */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    transition: background-color 60000s 0s, color 60000s 0s;
+}
+
+/*from above this fixes autofill changing the text color to red rather than black */
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.103) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset !important;
+    -webkit-text-fill-color: rgb(0, 0, 0) !important
+}
+
 /* changes the input field sizes and fonts */
 .form-group input {
     width: 100%;
@@ -175,10 +189,10 @@ input:hover {
     width: fit-content;
     padding:  6px 12px;
     max-width: 100%;
-    
     transition: all 0.2s ease;
     
 }
+
 
 #accountCreate {
     display: flex;
